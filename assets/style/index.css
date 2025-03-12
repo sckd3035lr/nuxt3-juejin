@@ -1,0 +1,131 @@
+/*.rank {*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    vertical-align: middle;*/
+/*}*/
+
+/*.rank .svg-icon {*/
+/*    width: 20px !important;*/
+/*    height: 20px !important;*/
+/*    fill: currentColor;*/
+/*    overflow: hidden;*/
+/*    vertical-align: -2px;*/
+/*}*/
+
+/*.primary-tag {*/
+/*    color: #1772f6;*/
+/*    font-size: 11px;*/
+/*    font-weight: 400;*/
+/*    !*line-height: 14px;*!*/
+/*    border-radius: 2px;*/
+/*    background: #eaf2ff;*/
+/*    height: 16px;*/
+/*    width: 30px;*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-shrink: 0;*/
+/*    top: -1px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.warning-tag {*/
+/*    font-size: 11px;*/
+/*    font-weight: 400;*/
+/*    line-height: 14px;*/
+/*    border-radius: 2px;*/
+/*    color: #ff7426;*/
+/*    background: #fff7e8;*/
+/*    height: 16px;*/
+/*    width: 30px;*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-shrink: 0;*/
+/*    top: -2px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.success-tag {*/
+/*    font-size: 11px;*/
+/*    font-weight: 400;*/
+/*    line-height: 14px;*/
+/*    border-radius: 2px;*/
+/*    color: #00b96b;*/
+/*    background: rgb(95 216 152 / 16%);*/
+/*    height: 16px;*/
+/*    width: 30px;*/
+/*    display: inline-flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    flex-shrink: 0;*/
+/*    top: -1px;*/
+/*    position: relative;*/
+/*}*/
+
+/*.default-tag {*/
+/*    color: #8a919f;*/
+/*    background: #f2f3f5;*/
+/*    padding: 2px 6px;*/
+/*    border-radius: 2px;*/
+/*    max-width: 76px;*/
+/*    box-sizing: border-box;*/
+/*    margin-left: 4px;*/
+/*    text-overflow: ellipsis;*/
+/*    overflow: hidden;*/
+/*    white-space: nowrap;*/
+/*    min-height: 18px;*/
+/*    font-size: 12px;*/
+/*    line-height: 18px;*/
+/*}*/
+
+/*.not-allowed-btn {*/
+/*    border-radius: 6px;*/
+/*    width: 92px !important;*/
+/*    line-height: 36px !important;*/
+/*    cursor: not-allowed !important;*/
+/*    padding: 0 !important;*/
+/*    font-size: 14px !important;*/
+/*    background-color: #abcdff !important;*/
+/*    color: #fff !important;*/
+/*}*/
+
+/*:root {*/
+/*    !** 顶部导航栏 *!*/
+/*    --jj-header-bg-color: #fff;*/
+/*    --jj-header-box-shadow: rgba(0, 0, 0, 0.05);*/
+/*    --jj-header-text-color: #515767;*/
+/*    --jj-header-text-hover: #252933;*/
+/*    --jj-header-text-active: #1e80ff;*/
+/*    --jj-header-nav-border-color: #ebebeb;*/
+/*    --jj-header-nav-box-shadow: #ebebeb;*/
+/*    --jj-header-post-btn-bg: #1e80ff;*/
+/*    --jj-header-post-btn-bg-hover: #1171ee;*/
+/*    --jj-header-post-btn-color: #fff;*/
+/*    --jj-header-search-input-border: #c2c8d1;*/
+/*    --jj-header-search-input-border-active: #1e80ff;*/
+/*    --jj-header-search-input-color: #8a919f;*/
+/*    --jj-header-search-placeholder-color: #c0c3cb;*/
+/*    --jj-header-search-btn-color: #86909c;*/
+/*    --jj-header-search-btn-color-active: #1e80ff;*/
+/*    --jj-header-search-btn-bg: #f2f3f5;*/
+/*    --jj-header-search-btn-bg-active: #eaf2ff;*/
+/*    --jj-search-history-title-color: #869aab;*/
+/*    --jj-search-history-clear-color: #1e80ff;*/
+/*    --jj-search-history-text-color: #5e6369;*/
+/*    --jj-search-history-item-bg: #eff2f5;*/
+/*    --jj-header-comment-color: #8a919f;*/
+/*    --jj-header-comment-color-active: #515767;*/
+/*    --jj-mobile-search-bg: #fff;*/
+/*    --jj-mobile-search-mask-bg: rgba(0, 0, 0, 0.6);*/
+/*    --jj-header-login-btn-bg: rgba(30, 128, 255, 0.05);*/
+/*    --jj-header-login-btn-bg-hover: rgba(30, 128, 255, 0.1);*/
+/*    --jj-header-login-btn-border: rgba(30, 128, 255, 0.3);*/
+/*    --jj-header-login-btn-color: #007fff;*/
+/*    --jj-header-menu-text-color: #252933;*/
+/*    --jj-header-menu-count-title-color: #8a919f;*/
+/*    --jj-header-menu-item-bg-hover: #f7f8fa;*/
+/*    --jj-header-menu-item-icon: #8a919f;*/
+/*    --jj-header-menu-footer-text-color: #8a919f;*/
+/*    --jj-header-menu-footer-text-color-hover: #1e80ff;*/
+/*}*/

@@ -1,0 +1,11 @@
+<svg class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+    <defs>
+        <style>
+            @font-face{font-family:element-icons;src:url(chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.woff)
+            format(&quot;woff&quot;),url(&quot;chrome-extension://moombeodfomdpjnpocobemoiaemednkg/fonts/element-icons.ttf
+            &quot;) format(&quot;truetype&quot;)}
+        </style>
+    </defs>
+    <path
+            d="M426.667 85.333A341.333 341.333 0 0 1 696.32 635.99L921.43 861.1a21.333 21.333 0 0 1 0 30.165l-30.166 30.165a21.333 21.333 0 0 1-30.165 0l-225.11-225.11A341.333 341.333 0 1 1 426.667 85.333zm0 85.334a256 256 0 1 0 0 512 256 256 0 0 0 0-512z"/>
+</svg>

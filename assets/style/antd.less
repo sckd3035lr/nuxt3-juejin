@@ -1,0 +1,348 @@
+@import '~ant-design-vue/dist';
+
+//@font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji !important;
+
+@primary-color: var(--jj-primary-color); // 全局主色
+@hover-primary-color: var(--jj-primary-color) -hover; // 全局主色
+@link-color: @juejin-link-color; // 链接色
+@success-color: @juejin-success-color; // 成功色
+@warning-color: @juejin-warning-color; // 警告色
+@error-color: @juejin-error-color; // 错误色
+@font-size-base: 14px; // 主字号
+@heading-color: rgba(0, 0, 0, 0.85); // 标题色
+@text-color: rgba(0, 0, 0, 0.65); // 主文本色
+@text-color-secondary: rgba(0, 0, 0, 0.45); // 次文本色
+@disabled-color: rgba(0, 0, 0, 0.25); // 失效色
+@border-radius-base: var(--jj-border-radius); // 组件/浮层圆角
+@border-color-base: #d9d9d9; // 边框色
+@box-shadow-base: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05); // 浮层阴影
+@danger-color: @juejin-error-color;
+
+.ant-menu-item:hover {
+  background-color: var(--jj-background-2);
+  color: var(--jj-primary-color);
+  border-radius: var(--jj-border-radius) !important;
+}
+
+.ant-menu:not(.ant-menu-horizontal) {
+  .ant-menu-item-selected {
+    border-radius: var(--jj-border-radius) !important;
+    transition: 0.1s all !important;
+  }
+}
+
+.ant-menu-item {
+  padding-left: 24px !important;
+}
+
+.ant-modal-content {
+  border-radius: 6px;
+}
+
+.ant-modal-header {
+  padding: 16px 20px 4px;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+}
+
+.ant-modal-body {
+  padding: 0 0 4px;
+}
+
+.ant-modal-footer {
+  border: 0;
+  padding: 0 20px 20px;
+  border-radius: 0 0 6px 6px;
+}
+
+.ant-modal-confirm .ant-modal-body {
+  padding: 20px;
+}
+
+// 小圆点动画
+.ant-scroll-number-only {
+  transition: none;
+}
+
+.ant-btn {
+
+  &-primary {
+    border: 1px solid @primary-color;
+    background-color: @primary-color;
+
+    span {
+      color: var(--jj-background-1);
+    }
+
+    &:focus, &:hover {
+      opacity: 1;
+      background-color: @hover-primary-color !important;
+      border: 1px solid @hover-primary-color !important;
+    }
+
+    &:disabled,
+    &.ant-btn-loading {
+      background-color: @primary-color;
+      border: 1px solid @primary-color;
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+
+    &.ant-btn-loading {
+      .anticon-loading {
+        color: var(--jj-background-1);
+      }
+    }
+
+    .anticon {
+      color: var(--jj-background-1);
+    }
+  }
+
+  &-link {
+    color: @primary-color;
+    border: transparent;
+    background-color: transparent;
+
+    &:hover, &:focus {
+      opacity: 1;
+      border: transparent;
+      background-color: transparent;
+      color: @primary-color;
+    }
+  }
+
+  &-danger {
+    color: var(--jj-background-1);
+    border: 1px solid @danger-color;
+    background-color: @danger-color;
+
+    &:hover, &:focus {
+      opacity: 1;
+      border: 1px solid @danger-color;
+      background-color: @danger-color;
+      color: var(--jj-background-1);
+    }
+  }
+
+  &-dashed {
+    border: 1px solid rgba(30, 128, 255, .3);
+    background-color: rgba(30, 128, 255, .05);
+    color: var(--jj-primary-color);
+
+    &:hover {
+      background-color: #edf3fc;
+    }
+
+    &:hover, &:focus {
+      opacity: 1;
+      border: 1px solid rgba(30, 128, 255, .3);
+      background-color: rgba(30, 128, 255, 0.1);
+      color: @primary-color;
+    }
+  }
+}
+
+.ant-select {
+  &-focused {
+    .ant-select-selection {
+      border-color: @primary-color !important;
+    }
+  }
+
+  &-selection {
+    border-radius: var(--jj-border-radius);
+    box-shadow: none !important;
+
+    &:active, &:focus, &:hover {
+      border-color: @primary-color !important;
+    }
+
+    .ant-select-selection__choice {
+      background-color: #e8f3ff;
+      border: none;
+
+      .ant-select-selection__choice__content {
+        color: @primary-color;
+        font-size: 12px;
+      }
+
+      .ant-select-selection__choice__remove {
+        color: @primary-color;
+      }
+    }
+  }
+}
+
+.ant-input {
+  font-size: 14px;
+
+  &:focus {
+    background-color: var(--jj-background-1);
+    box-shadow: none;
+  }
+}
+
+.ant-dropdown {
+
+  .ant-dropdown-menu {
+    padding: 4px;
+
+    .ant-dropdown-menu-item {
+      border-radius: @border-radius-base;
+    }
+  }
+
+  .code-highlight-stylelist {
+    font-size: 13px;
+
+    .ant-dropdown-menu-item-group {
+      &-title {
+        border-bottom: 1px solid #f1f1f1;
+      }
+
+      &-list {
+        margin: 0;
+        max-height: 200px;
+        overflow-y: scroll;
+        padding-top: 4px;
+
+        li {
+          width: 180px;
+          display: flex;
+          align-items: center;
+
+          p {
+            flex: 1;
+            width: 0;
+            margin-bottom: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            padding-right: 6px;
+          }
+
+          i {
+            flex-shrink: 0;
+            color: @primary-color;
+            display: none;
+          }
+
+          &.active {
+            background-color: #e6f7ff;
+
+            i {
+              display: inline-block;
+            }
+          }
+        }
+
+        &::-webkit-scrollbar {
+          width: 4px !important;
+          display: none;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          width: 4px;
+          background-color: rgb(201, 205, 212) !important;
+          border-radius: var(--jj-border-radius);
+        }
+
+        &::-webkit-scrollbar-track {
+          background-color: var(--jj-background-1);
+        }
+      }
+    }
+  }
+}
+
+.ant-input-lg {
+  font-size: 14px;
+}
+
+.ant-btn-lg {
+  font-size: 14px;
+  color: var(--jj-font-color-2);
+}
+
+.ant-select-lg {
+  font-size: 14px;
+  color: var(--jj-font-color-2);
+}
+
+// 卡片
+.ant-card-bordered {
+  border: none;
+  border-radius: @border-radius-base;
+}
+
+.ant-card-head {
+  padding: 0 15px;
+  border-bottom: 1px solid rgba(0, 0, 0, .06);
+}
+
+.ant-card-body {
+  padding: 0;
+}
+
+.list-container {
+  padding: 8px;
+}
+
+// tooltip
+.ant-tooltip-arrow {
+  display: none;
+}
+
+.ant-list-item-meta-title {
+  margin-bottom: 4px;
+  color: var(--jj-font-color-1);
+  font-size: 15px;
+  line-height: 22px;
+}
+
+// 日历去掉年月切换
+.ant-fullcalendar-fullscreen .ant-fullcalendar-header .ant-radio-group {
+  display: none !important;
+}
+
+.ant-fullcalendar-fullscreen .ant-fullcalendar-month, .ant-fullcalendar-fullscreen .ant-fullcalendar-date {
+  height: 72px;
+  //width: 68px;
+  //background: #f7f8fa;
+  //margin: 4px;
+  //border: none;
+  //border-radius: var(--jj-border-radius);
+}
+
+.ant-fullcalendar-fullscreen .ant-fullcalendar-content {
+  height: auto;
+}
+
+.ant-skeleton-content {
+  h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+}
+
+.ant-skeleton-content .ant-skeleton-title {
+  margin: 8px 0;
+}
+
+.ant-skeleton-content .ant-skeleton-title + .ant-skeleton-paragraph {
+  margin: 15px 0 8px;
+}
+
+.ant-skeleton-paragraph {
+  margin: 8px 0;
+}
+
+.ant-progress {
+  line-height: 5px;
+  height: 5px;
+}
+
+.ant-progress-inner {
+  background-color: rgba(30, 128, 255, 0.2);
+}
