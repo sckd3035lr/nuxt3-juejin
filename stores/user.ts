@@ -1,23 +1,35 @@
 import { defineStore } from 'pinia';
 import { ref, reactive } from 'vue';
 
+// 定义用户信息的类型
+interface UserInfo {
+  [key: string]: any;
+}
+
+// 定义登录数据的类型
+interface LoginData {
+  token: string;
+  userinfo: UserInfo;
+}
+
 export const useUserStore = defineStore('user', () => {
   // 定义响应式状态
-  const token = ref('');
-  const userinfo = reactive({});
+  const token = ref<string>('');
+  const userinfo = reactive<UserInfo>({});
+
   // 用户登录
-  const login = (data: any) => {
+  const login = (data: LoginData) => {
     setToken(data.token);
     setUserInfo(data.userinfo);
   };
 
   // 单独更新或写入 token
-  const setToken = (data: any) => {
+  const setToken = (data: string) => {
     token.value = data;
   };
 
   // 单独更新用户信息或写入
-  const setUserInfo = (data: any) => {
+  const setUserInfo = (data: UserInfo) => {
     Object.assign(userinfo, data);
   };
 

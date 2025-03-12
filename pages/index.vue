@@ -1,27 +1,25 @@
 <template>
-  <a-button @click="handleClick">
-    button
-  </a-button>
   <a-button @click="login">
     login
   </a-button>
   <a-button @click="logout">
     logout
   </a-button>
-  <div v-if="loginUser">{{ loginUser.name }}</div>
-  <div v-if="loading">Loading...</div>
-  <p v-else v-for="item in list" :key="item.id">{{ item.title }}</p>
+  <client-only>
+    <div v-if="loginUser">{{ loginUser.name }}</div>
+  </client-only>
+  <p v-for="item in list" :key="item.id">
+    <nuxt-link :href="'/post/' + item.id" target="_blank">
+      {{ item.title }}
+    </nuxt-link>
+  </p>
 </template>
 
 <script lang="ts" setup>
 import { defineAppConfig } from '#app';
 import { computed, ref } from "vue";
-import { postApi } from "~/utils/request";
-import { useUserStore } from '~/stores/user'; // 确保正确导入 useUserStore
-
-const config = useRuntimeConfig()
-
-console.log(config);
+import { useUserStore } from '~/stores/user';
+import { getList } from "~/api/postApi";
 
 const userStore = useUserStore();
 const loginUser = computed(() => userStore.userinfo);
@@ -31,10 +29,7 @@ defineAppConfig({
 });
 
 const login = () => {
-  const u = {
-    id: 1,
-    name: 'sckd'
-  }
+  const u = {id: 1, name: 'sckd'}
   userStore.setUserInfo(u)
 }
 
@@ -42,34 +37,18 @@ const logout = () => {
   userStore.logout()
 }
 
-const list = ref<Info[]>([]); // 初始化 list 变量
-const loading = ref(false); // 加载状态
+const list = ref<any[]>([])
 
-interface Info {
-  id: number;
-  title: string
+const {data: postList} = await useAsyncData("index_GetPostList", () => getList({
+  pageNo: 1,
+  pageSize: 20,
+  sortRule: 'newest',
+}));
+if (postList.value) {
+  list.value = postList.value.data.records;
 }
 
-interface List {
-  records: Info[],
-}
-
-const handleClick = async () => {
-  loading.value = true;
-  try {
-    const {data} = await postApi<List>('/post/page', {
-      pageNo: 1,
-      pageSize: 20,
-      sortRule: 'newest',
-    });
-    list.value = data.records;
-  } catch (err) {
-  } finally {
-    loading.value = false;
-  }
-}
 </script>
 
 <style scoped>
-/* 样式部分可根据需求添加 */
 </style>
