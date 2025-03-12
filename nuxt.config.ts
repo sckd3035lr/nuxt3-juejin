@@ -4,7 +4,18 @@ export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: {enabled: true},
   devServer: {
-    port: 3001,
+    port: 31104,
+  },
+  app: {
+    head: {
+      title: '掘金 - 分享新鲜事', // default fallback title
+      htmlAttrs: {
+        lang: 'en',
+      },
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      ]
+    }
   },
   runtimeConfig: {
     // public: {

@@ -9,7 +9,7 @@
     <div v-if="loginUser">{{ loginUser.name }}</div>
   </client-only>
   <p v-for="item in list" :key="item.id">
-    <nuxt-link :href="'/post/' + item.id" target="_blank">
+    <nuxt-link :href="`/post/${item.id}`" target="_blank">
       {{ item.title }}
     </nuxt-link>
   </p>
